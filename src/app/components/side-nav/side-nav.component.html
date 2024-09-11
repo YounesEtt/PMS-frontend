@@ -1,0 +1,15 @@
+<ng-container *ngIf="true">
+  <div class="sidebar">
+    <div class="logo py-4">
+      <img src="../../../assets/logoApp.png" alt="Logo" />
+    </div>
+    <hr class="divider">
+    <h5 class="applications-title">APPLICATIONS</h5>
+    <div class="menu-items">
+      <button *ngFor="let item of items" class="menu-button" [routerLink]="item.routerLink">
+        <i [class]="item.icon"></i>
+        <span>{{ item.label }}</span>
+      </button>
+    </div>
+  </div>
+</ng-container>

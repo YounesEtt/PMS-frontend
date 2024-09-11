@@ -1,0 +1,14 @@
+<p-toolbar>
+    <div class="p-toolbar-group-left">
+      <button pButton icon="pi pi-bars" (click)="toggleSidebar()" class="black-button"></button>
+    </div>
+    <div class="p-toolbar-group-right">
+      <button pButton label="{{ fullName }}" icon="pi pi-user" class="user black-button" (click)="overlayPanel.toggle($event)"></button>
+      <p-overlayPanel #overlayPanel [dismissable]="true" class="overlay-panel">
+        <div class="overlay-content">
+          <button pButton label="Logout" icon="pi pi-sign-out" class="logout-button black-button" (click)="logout()"></button>
+        </div>
+      </p-overlayPanel>
+    </div>
+  </p-toolbar>
+  
